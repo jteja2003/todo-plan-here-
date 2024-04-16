@@ -1,0 +1,152 @@
+:root{
+    --dark:#640d14;
+    --darker:#38040e;
+    --darkest: #250902;
+    --light:#E8E8E8;
+    /* mojorly used colors  */
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background:var(--darker) ;
+
+}
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+header h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #374151;
+    margin-bottom: 1rem;
+    padding-bottom: 2px;
+
+}
+#task-form{
+    display: flex;
+}
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+}
+#task-input{
+    flex: 1 1 0%;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+#task-input::placeholder{
+    color: #e8e8e88e;
+    
+    font-weight: 200;
+}
+#task-submit{
+    font-size: 1.25rem;
+    color: #19cdf0d7;
+    font-weight: 200;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+#task-submit:hover{
+    opacity: 0.8;
+    background-color: #070c1374;
+    border-radius: 1rem;
+}
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.task-list{
+    padding: 1rem;
+
+}
+.task-list h2{
+    font-size: 25px;
+    color: #374151;
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+    padding-bottom:10px;
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content .text{
+    color: bisque;
+    font-size: 1.125rem;
+    width: 100% ;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: #7338a7d7; ;
+
+}
+#tasks .task .action {
+        display: flex;
+        margin: 0 --0.5rem;
+}
+.task .action button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+.task .actions button:active{
+    opacity: 0.6;
+}
+
+.task .actions .edit{
+    color: #19cdf0d7;
+    padding: 2px;
+}
+.task .actions .delete{
+    color:crimson;
+}
+
+
+.clock {
+    position: absolute;
+    top: 7%;
+    left: 85%;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    color: #17D4FE;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    background-color:#ad2831 ;
+    padding: 15px;
+    border-radius: 5px;
+}
